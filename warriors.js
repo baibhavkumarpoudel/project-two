@@ -1,13 +1,13 @@
 const warriors= [
     {
-        name: 'LeBron James',
-        username: 'king',
-        password: 'lakers'
+        name: 'Edwin Aldrin',
+        username: 'buzz',
+        password: 'apollo'
     },
     {
-        name: 'Lionel Messi',
-        username: 'beast',
-        password: 'barca'
+        name: 'Charles Conrad',
+        username: 'pete',
+        password: 'earth'
     },
     {
         name: 'Neil Armstrong',
