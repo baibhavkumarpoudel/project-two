@@ -6,17 +6,20 @@ module.exports = {
       {
         name: 'Edwin Aldrin',
         username: 'buzz',
-        password: 'apollo'
+        password: 'apollo',
+        spaceshipId: 1
     },
     {
         name: 'Charles Conrad',
         username: 'pete',
-        password: 'earth'
+        password: 'earth',
+        spaceshipId: 2
     },
     {
         name: 'Neil Armstrong',
         username: 'myspace',
-        password: 'moonwalk'
+        password: 'moonwalk',
+        spaceshipId: 3
     }
     ], {})
   },
