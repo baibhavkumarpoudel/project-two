@@ -1,6 +1,6 @@
 const warriors = require('../warriors')
 const Warrior = require('../models').Warrior
-const SpaceShip = require('../models').SpaceShip
+const Spaceship = require('../models').Spaceship
 
 const index = (req,res) => {
     Warrior.findAll().then(warriors => {
@@ -35,11 +35,11 @@ const login = (req,res)  => {
 const renderProfile = (req,res) => {
     Warrior.findByPk(req.params.index, {
         include: [{
-            model: SpaceShip,
+            model: Spaceship,
             attributes: ['name']
         }]
     }).then(user => {
-        SpaceShip.findAll().then(allSpaceships => {
+        Spaceship.findAll().then(allSpaceships => {
             res.render('warriors/profile.ejs', {
                 user:user,
                 spaceships: allSpaceships
