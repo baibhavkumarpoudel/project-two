@@ -10,7 +10,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Warrior.belongsTo(models.Spaceship, { foreignKey: 'spaceshipId'})
+      Warrior.hasMany(models.Weapon, { foreignKey: 'warriorId'})
     }
   };
   Warrior.init({
@@ -18,7 +19,6 @@ module.exports = (sequelize, DataTypes) => {
     username: DataTypes.STRING,
     password: DataTypes.STRING,
     spaceshipId: DataTypes.INTEGER,
-    weaponId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Warrior',

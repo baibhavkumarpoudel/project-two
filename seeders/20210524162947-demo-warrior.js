@@ -8,21 +8,21 @@ module.exports = {
         username: 'buzz',
         password: 'apollo',
         spaceshipId: 1,
-        weaponId: 1
+        
     },
     {
         name: 'Charles Conrad',
         username: 'pete',
         password: 'earth',
         spaceshipId: 2,
-        weaponId:2
+        
     },
     {
         name: 'Neil Armstrong',
         username: 'myspace',
         password: 'moonwalk',
         spaceshipId: 3,
-        weaponId: 3
+        
     }
     ], {})
   },
