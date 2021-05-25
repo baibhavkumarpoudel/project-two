@@ -1,6 +1,7 @@
 const warriors = require('../warriors')
 const Warrior = require('../models').Warrior
 const Spaceship = require('../models').Spaceship
+const Weapon = require('../models').Weapon
 
 const index = (req,res) => {
     Warrior.findAll().then(warriors => {
@@ -40,21 +41,40 @@ const renderProfile = (req,res) => {
         }]
     }).then(user => {
         Spaceship.findAll().then(allSpaceships => {
+        Weapon.findAll().then(allWeapons => {
             res.render('warriors/profile.ejs', {
                 user:user,
-                spaceships: allSpaceships
+                spaceships: allSpaceships,
+                weapons: allWeapons
             })
+        })    
         })
     })
 }
 
+
+
 const editProfile = (req,res) => {
-    Warrior.update(req.body, {
+    console.log(req.body)
+    const warriorBody = {
+        name: req.body.name,
+        username: req.body.username,
+        password: req.body.password,
+        spaceshipId: req.body.spaceshipId 
+    }
+    Warrior.update(warriorBody, {
         where: {id: req.params.index},
         returning: true,
         plain: true 
     }).then(updatedUser => {
-        res.redirect(`/warriors/profile/${updatedUser[1].dataValues.id}`)
+        const weaponBody = {
+            warriorId: updatedUser[1].dataValues.id
+        }
+        Weapon.update(weaponBody, {
+            where: {id: req.body.weaponId}
+        }).then(updatedWeapon => {
+            res.redirect(`/warriors/profile/${updatedUser[1].dataValues.id}`)
+        })
     })
 }
 

@@ -17,6 +17,12 @@
                 <option value="<%= spaceships[i].id %>"><%= spaceships[i].name %></option>
             <% } %>
         </select>
+        <select name="weaponId">
+            <% for (let i = 0; i < weapons.length; i++) { %>
+                <option value="<%= weapons[i].id %>"><%= weapons[i].name %></option>
+            <% } %>
+        </select>
+
         <input type="submit" value="Edit this profile" />
     </form>
  
