@@ -1,35 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
-</head>
-<body>
-    <h1> Welcome, <%=user.name %></h1>
-    <form action="/warriors/profile/<%= user.id %>?_method=PUT" method="POST">
-        Name: <input type="text" name="name" value=<%=user.name%> /> <br> <br>
-        Username: <input type="text" name="username" value=<%=user.username%> /> <br> <br>
-        Password: <input type="text" name="password" value=<%=user.password%> /> <br> <br>
-        <select name="spaceshipId">
-            <% for (let i = 0; i < spaceships.length; i++) { %>
-                <option value="<%= spaceships[i].id %>"><%= spaceships[i].name %></option>
-            <% } %>
-        </select>
-        <select name="weaponId">
-            <% for (let i = 0; i < weapons.length; i++) { %>
-                <option value="<%= weapons[i].id %>"><%= weapons[i].name %></option>
-            <% } %>
-        </select>
-
-        <input type="submit" value="Edit this profile" />
-    </form>
- 
-    <form action="/warriors/<%= user.id %>?_method=DELETE" method="POST">
-        <input type="submit" value="DELETE WARRIOR" />
-    </form>
-
-    <a href = "/weapon">Let's see all your Weapons!</a>
+<%- include('../partials/boilerplate') %>
+<body class="profile">
+    <div class ="main-center">
+        <h1 class = "profile-header"> Welcome, <%=user.name %></h1>
+        <form class = "profile-app" style ="text-decoration: none; 
+        color: white; font-size: 35px;"action="/warriors/profile/<%= user.id %>?_method=PUT" method="POST">
+            Name: <input class ="profile-input" type="text" name="name" value=<%=user.name%> /> <br> <br>
+            Username: <input class ="profile-input" type="text" name="username" value=<%=user.username%> /> <br> <br>
+            Password: <input class ="profile-input" type="text" name="password" value=<%=user.password%> /> <br> <br>
+            <h1 class="profile-spaceship">PICK YOUR SPACESHIP</h1>
+            <select name="spaceshipId">
+                <% for (let i = 0; i < spaceships.length; i++) { %>
+                    <option value="<%= spaceships[i].id %>"><%= spaceships[i].name %></option>
+                <% } %>
+            </select><br> <br>
+            <h1 class="profile-weapon">PICK YOUR WEAPON</h1>
+            <select name="weaponId">
+                <% for (let i = 0; i < weapons.length; i++) { %>
+                    <option value="<%= weapons[i].id %>"><%= weapons[i].name %></option>
+                <% } %>
+            </select><br> <br>
+    
+            <input type="submit" value="UPDATE YOUR WARRIOR!" /><br> <br>
+            <form action="/warriors/<%= user.id %>?_method=DELETE" method="POST">
+                <input type="submit" value="DELETE YOUR WARRIOR" />
+            </form>
+        </form>
+     
+    
+        <a href = "/weapon">Let's see all your Weapons!</a>
+    </div>
 </body>
 </html>
