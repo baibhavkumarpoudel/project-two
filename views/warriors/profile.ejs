@@ -9,9 +9,9 @@
 <body>
     <h1> Welcome, <%=user.name %></h1>
     <form action="/warriors/profile/<%= user.id %>?_method=PUT" method="POST">
-        Name: <input type="text" name="name" value=<%=user.name%> />
-        Username: <input type="text" name="username" value=<%=user.username%> />
-        Password: <input type="text" name="password" value=<%=user.password%> />
+        Name: <input type="text" name="name" value=<%=user.name%> /> <br> <br>
+        Username: <input type="text" name="username" value=<%=user.username%> /> <br> <br>
+        Password: <input type="text" name="password" value=<%=user.password%> /> <br> <br>
         <select name="spaceshipId">
             <% for (let i = 0; i < spaceships.length; i++) { %>
                 <option value="<%= spaceships[i].id %>"><%= spaceships[i].name %></option>

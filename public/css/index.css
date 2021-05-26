@@ -1,5 +1,24 @@
-*{
-    background-color: yellow;
-    color: green;
+.title{
+    background-image:url('../images/main.jpg');
+    background-position:center;
+    background-size: cover;
+    height: 95vh;
+    margin: 0;
+    padding: 0;
 }
 
+.main-center{
+    text-align: center;
+    padding:10x;
+    font: white;
+}
+
+.header{
+    color: white;
+    font-size: 50px;
+}
+
+.header:hover{
+    transition: all .25s ease-in;
+    box-shadow: 10px 7px 15px white;
+}
