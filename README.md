@@ -19,6 +19,8 @@
     - Associations 
     - Postgres
 - CSS framework
+- Paint 
+- Google Docs
 
 # Room for Improvement 
 
