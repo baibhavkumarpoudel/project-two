@@ -59,12 +59,13 @@
     background-color: black;
     margin: 35px;
     padding:0;
+    height: 100vh;;
     
    
 }
 
 .circle{
-    
+    float: right;
     position:relative;
     width: 60vh;
     height: 60vh;
@@ -72,6 +73,7 @@
     border-radius: 50%;
     animation: animate 0.5s linear infinite;
     
+
 }
 
 @keyframes animate {
