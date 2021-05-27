@@ -20,7 +20,7 @@
     background-image:url('../images/background-two.jpg');
     background-position:center;
     background-size: cover;
-    height: 100vh;
+    height: 170vh;
     margin: 0;
     padding: 0;
 }
@@ -39,10 +39,14 @@
     background-image:url('../images/weapon.jpg');
     background-size: cover;
     background-position:center;
-    height: 95vh;
+    height: 152vh;
     margin: 0;
     padding: 0;
     
+}
+
+.weapon-picture{
+    background-color: white;
 }
 
 .main-center{

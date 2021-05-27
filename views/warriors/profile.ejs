@@ -9,19 +9,30 @@
             Password: <input class ="profile-input" type="text" name="password" value=<%=user.password%> /> <br> <br>
             <h1 class="profile-spaceship">PICK YOUR SPACESHIP</h1>
             <div>
-                <p >
-                    AK-47
-                    <img src="../image/Ak47.jpg" alt="Ak47">
-                    
+                <p class = "weapon-picture">   
+                    <img style = "width:250px;" src="../../images/unsc.jpg" alt="UNSC">
+                    <img style = "width:250px;" src="../../images/battlestar.jpg" alt="battlestar">
+                    <img style = "width:250px;" src="../../images/falcon.jpg" alt="Falcon">
                 </p>
-                
             </div>
             <select class ="space-size" name="spaceshipId">
                 <% for (let i = 0; i < spaceships.length; i++) { %>
                     <option class ="space-input" value="<%= spaceships[i].id %>"><%= spaceships[i].name %></option>
-                <% } %>
-            </select><br> <br>
-            <h1 class="profile-weapon">PICK YOUR WEAPON</h1>
+                    <% } %>
+                </select><br> <br>
+                <h1 class="profile-weapon">PICK YOUR WEAPON</h1>
+                <div>
+                    <p class = "weapon-picture">   
+                        <img style = "width:200px;" src="../../images/ak47.jpg" alt="Ak47">
+                        <img style = "width:200px;" src="../../images/FN.jpg" alt="FN-Scar">
+                        <img style = "width:200px;" src="../../images/m13.jpg" alt="M13">
+                        <img style = "width:200px;" src="../../images/p90.jpg" alt="P90">
+                        <img style = "width:200px;" src="../../images/r9.jpg" alt="R9">
+                        <img style = "width:200px;" src="../../images/dragunov.jpg" alt="Dragunov">
+                        <img style = "width:200px;" src="../../images/rpg.jpg" alt="RPG">
+                    </p>
+                    
+                </div>
             <select class ="space-size" name="weaponId">
                 <% for (let i = 0; i < weapons.length; i++) { %>
                     <option class ="weapon-input" value="<%= weapons[i].id %>"><%= weapons[i].name %></option>

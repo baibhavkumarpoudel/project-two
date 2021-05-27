@@ -2,19 +2,19 @@
 <body  style = "padding: 15px;"  class ="weapon-index">
     <h1 class = "index-header">Welcome, Developer. Make your changes for next season!</h1>
     <nav>
-        <a style ="text-decoration:dotted; 
-        color:lightsalmon; font-size: 35px;" href="/weapon/new">Add a new Weapon! </a>
+        <a style ="text-decoration:dashed; 
+        color:lightsalmon; font-size: 30px;" href="/weapon/new">Add a new Weapon! </a>
     </nav>
     <% for (let i =0; i < weapon.length; i++ ){ %>
         <ul class = "weapon">
            <a  style ="text-decoration:wavy; 
-           color: greenyellow; font-size: 20px;"href="/weapon/<%= weapon[i].id %>" <p><%= weapon[i].name %></p></a>
+           color: greenyellow; font-size: 29px;"href="/weapon/<%= weapon[i].id %>" <p><%= weapon[i].name %></p></a>
         </ul>
         <form action="/weapon/<%= weapon[i].id %>?_method=DELETE" method="POST">
             <input class="indexweapon-delete" type="submit" value="DELETE THIS WEAPON" />
         </form><br><br>
         <a  style ="text-decoration: dotted; 
-        color:orangered; font-size: 30px;" href="/weapon/<%= weapon[i].id %>/edit">Edit this Weapon!</a>
+        color:orangered; font-size: 20px;" href="/weapon/<%= weapon[i].id %>/edit">Edit this Weapon!</a>
    <% } %>
 </body>
 </html>

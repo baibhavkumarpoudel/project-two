@@ -10,6 +10,8 @@
     <h1>Edit Weapon Page</h1>
     <form action="/weapon/<%= weapon.id %>?_method=PUT" method="POST">
         <input type ="text" name="name" value="<%= weapon.name %>" />
+        <input type ="text" name="description" value="<%= weapon.description %>" />
+        <input type ="text" name="img" value="<%= weapon.img %>" />
         <input type="submit" name="" value="Update your weapon" />
     </form>
 </body>
