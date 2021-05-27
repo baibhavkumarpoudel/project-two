@@ -35,6 +35,16 @@
 
 }
 
+.weapon-index{
+    background-image:url('../images/weapon.jpg');
+    background-size: cover;
+    background-position:center;
+    height: 95vh;
+    margin: 0;
+    padding: 0;
+    
+}
+
 .main-center{
     text-align: center;
     padding:10x;
@@ -179,6 +189,25 @@
     
 }
 
+.indexweapon-delete{
+    transition: all .3s ease-in-out;
+    padding: 10px;
+    width: 10%;
+    background-color: black;
+    color: greenyellow;
+    font-size: 13px;
+    font-weight: bolder;
+    box-shadow: 10px 7px 8px white;
+    Border: 5px groove white;
+}
+
+.indexweapon-delete:hover{
+    cursor:grab;
+    background-color: white;
+    Border: 5px groove green;
+    color: black;
+    box-shadow: 10px 7px 8px black
+}
 .profile-delete{
     transition: all .3s ease-in-out;
     padding: 10px;
