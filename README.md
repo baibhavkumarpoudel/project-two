@@ -1,8 +1,7 @@
 # Project-Two
 
-# App Name
+# App Name - The Game of War...In Space
 
-- The Game of War...In Space
 - It is an initial back-end side of an app development feature where players(warriors) get to choose their personality through gaming.
 - App developers get to edit/delete/customize weapons for next seasons as well.
 
