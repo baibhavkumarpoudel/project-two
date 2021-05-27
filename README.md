@@ -22,6 +22,7 @@
 - Paint 
 - Google Docs
 
+
 # Room for Improvement 
 
 - Working on profile.ejs regarding weapon and list correspondence
