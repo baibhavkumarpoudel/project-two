@@ -53,6 +53,21 @@
     margin: 35px;
     padding: 0;
 }
+
+.new-weapon{
+    background-color: black;
+    margin: 35px;
+
+}
+
+.show-weapon{
+    background-image:url('../images/show.jpg');
+    background-position:center;
+    background-size: cover;
+    height: 95vh;
+    margin: 35px;
+    padding: 0;
+}
 .weapon-picture{
     background-color: white;
 }

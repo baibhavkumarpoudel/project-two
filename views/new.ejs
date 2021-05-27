@@ -1,11 +1,14 @@
 <%- include('partials/boilerplate') %>
 <body class = "new-weapon">
-    <h1  >New Weapon Page</h1>
+    <h1 class = "index-header">New Weapon Page</h1>
     <form action="/weapon" method="POST">
-        <input type ="text" name="name" placeholder="name" />
-        <input type ="text" name="description" placeholder="description" />
-        <input type="text" name="img" placeholder="img"/>
-        <input type="submit" name="" value="SUBMIT" />
+        <h2 style= "color: white;" >Name</h2>
+        <input class = "space-input" type ="text" name="name" placeholder="name" /><br><br>
+        <h2 style= "color: white;" >Description</h2>
+        <input class = "space-input" type ="text" name="description" placeholder="description" /><br><br>
+        <h2 style= "color: white;" >img</h2>
+        <input class = "space-input" type="text" name="img" placeholder="img"/><br><br>
+        <input class = "profile-update" type="submit" name="" value="SUBMIT" />
     </form>
 </body>
 </html>

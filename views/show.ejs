@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weapon Show Page</title>
-</head>
-<body>
-    <h1>Weapon show page</h1>
+<%- include('partials/boilerplate') %>
+<body class = "show-weapon">
+    <h1 class = "index-header" style="background-color: black;" >Weapon show page</h1>
     <% if (weapon) { %>
-        <p><%= weapon.name %> </p>
-        <p><%= weapon.description %></p>
+        <p style = "color: greenyellow; font-size: 70px; background-color: black;"><%= weapon.name %> </p>
+        <p style = "color: greenyellow; font-size: 20px; background-color: black;"><%= weapon.description %></p>
         <img src=<%= weapon.img %> />
 
     <% } %>
