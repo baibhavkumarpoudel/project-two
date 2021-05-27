@@ -40,11 +40,19 @@
     background-size: cover;
     background-position:center;
     height: 152vh;
-    margin: 0;
+    margin: 50px;
     padding: 0;
     
 }
 
+.edit-weapon{
+    background-image:url('../images/weapon-add.jpg');
+    background-size: cover;
+    background-position:center;
+    height: 90vh;
+    margin: 35px;
+    padding: 0;
+}
 .weapon-picture{
     background-color: white;
 }

@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Weapon</title>
-</head>
-<body>
-    <h1>Edit Weapon Page</h1>
+<%- include('partials/boilerplate') %>
+<body class = "edit-weapon">
+    <h1 class = "index-header">Edit Weapon Page</h1>
     <form action="/weapon/<%= weapon.id %>?_method=PUT" method="POST">
-        <input type ="text" name="name" value="<%= weapon.name %>" />
-        <input type ="text" name="description" value="<%= weapon.description %>" />
-        <input type ="text" name="img" value="<%= weapon.img %>" />
-        <input type="submit" name="" value="Update your weapon" />
+        <h2 style= "color: white;" >Name</h2>
+        <input  class = "space-input" type ="text" name="name" value="<%= weapon.name %>" /><br><br>
+        <h2 style= "color: white;">Description</h2>
+        <input class = "space-input" type ="text" name="description" value="<%= weapon.description %>" /><br><br>
+        <h2 style= "color: white;">Image</h2>
+        <input class = "space-input" type ="text" name="img" value="<%= weapon.img %>" /><br><br>
+        <input class = "profile-update" type="submit" name="" value="Update your weapon" />
     </form>
 </body>
 </html>
